@@ -1,5 +1,4 @@
-#include "std_lib_facilities.h"
-#include <bitset>  
+#include "std_lib_facilities.h" 
 
 int main() {
 int a = 1; //Az "a" amit shiftelünk
