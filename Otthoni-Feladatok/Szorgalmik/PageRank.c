@@ -2,15 +2,13 @@
 #include <math.h>
 
 void
-kiir (double tomb[], int db)
-{
+kiir (double tomb[], int db) {
 int i;
 for (i=0; i<db; i++)
 printf("PageRank [%d]: %lf\n", i, tomb[i]);
 }
 
-double tavolsag(double pagerank[],double pagerank_temp[],int db)
-{
+double tavolsag(double pagerank[],double pagerank_temp[],int db) {
 double tav = 0.0;
 int i;
 for(i=0;i<db;i++)
@@ -33,12 +31,10 @@ double PRv[4] = {1.0 / 4.0, 1.0 / 4.0, 1.0 / 4.0, 1.0 / 4.0};
 long int i,j;
 i=0; j=0;
 
-while(1)
-{
+while(1) {
 for(i=0;i<4;i++)
 PR[i] = PRv[i];
-for (i=0;i<4;i++)
-{
+for (i=0;i<4;i++) {
 double temp=0;
 for (j=0;j<4;j++)
 temp+=L[i][j]*PR[j];
