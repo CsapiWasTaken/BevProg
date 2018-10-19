@@ -10,8 +10,7 @@
 #include <iostream>
 
 double
-atlagos_szohossz (const char *titkos, int titkos_meret)
-{
+atlagos_szohossz (const char *titkos, int titkos_meret) {
   int sz = 0;
   for (int i = 0; i < titkos_meret; ++i)
     if (titkos[i] == ' ')
@@ -21,8 +20,7 @@ atlagos_szohossz (const char *titkos, int titkos_meret)
 }
 
 int
-tiszta_lehet (const char *titkos, int titkos_meret)
-{
+tiszta_lehet (const char *titkos, int titkos_meret) {
   // a tiszta szoveg valszeg tartalmazza a gyakori magyar szavakat
   // illetve az átlagos szóhossz vizsgálatával csökkentjük a
   // potenciális töréseket
@@ -36,13 +34,11 @@ tiszta_lehet (const char *titkos, int titkos_meret)
 }
 
 void
-exor (const char kulcs[], int kulcs_meret, char titkos[], int titkos_meret)
-{
+exor (const char kulcs[], int kulcs_meret, char titkos[], int titkos_meret) {
 
   int kulcs_index = 0;
 
-  for (int i = 0; i < titkos_meret; ++i)
-    {
+  for (int i = 0; i < titkos_meret; ++i) {
 
       titkos[i] = titkos[i] ^ kulcs[kulcs_index];
       kulcs_index = (kulcs_index + 1) % kulcs_meret;
@@ -53,8 +49,7 @@ exor (const char kulcs[], int kulcs_meret, char titkos[], int titkos_meret)
 
 int
 exor_tores (const char kulcs[], int kulcs_meret, char titkos[],
-	    int titkos_meret)
-{
+	    int titkos_meret) {
 
   exor (kulcs, kulcs_meret, titkos, titkos_meret);
 
